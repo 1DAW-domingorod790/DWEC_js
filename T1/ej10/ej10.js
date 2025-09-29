@@ -4,9 +4,11 @@
         if(n == 2 || n == 3) {
             return true;
         }else{
-            return (n%2 && n%3) != 0;
+            return (n % 2 != 0) && (n % 3 != 0);
         }
     }
 
-    console.log(esPrimo());
+    let n = parseInt(prompt("Introduce un número: "))
+
+    console.log(esPrimo(n));
 }

@@ -10,10 +10,15 @@
         n2 = parseInt(prompt("Introduce un número"));
     }while(isNaN(n2));
 
-    let operacion;
+    let operacion = '';
     do{
         operacion = prompt("Introduce la operación");
-    } while (operacion != '+' || operacion != '-' || operacion != '*' || operacion != '/')
+        if (operacion != '+' && operacion != '-' && operacion != '*' && operacion != '/'){
+            alert("Operación inválida.");
+        }
+
+    } while (operacion != '+' && operacion != '-' && operacion != '*' && operacion != '/');
+    
     switch (operacion) {
         case '+': 
             console.log(n1 + n2);
