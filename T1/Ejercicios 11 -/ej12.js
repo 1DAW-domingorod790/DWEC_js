@@ -9,5 +9,6 @@
         }
     }
 
-    console.log(convertirGrados(0, 'C'));
+    console.log(convertirGrados(23, 'C'));
+    console.log(convertirGrados(23, 'F'));
 }

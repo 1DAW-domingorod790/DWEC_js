@@ -1,5 +1,6 @@
 "use strict"
 {
+    //NORMAL FUNCTION
     function factorial (n) {
         let acum = 1;
         for (let i = n; i > 0; i--){
@@ -8,6 +9,7 @@
         return acum;
     }
 
+    //RECURSIVE FUNCTION
     function factorial2 (n) {
         if(n == 1) {
             return n;

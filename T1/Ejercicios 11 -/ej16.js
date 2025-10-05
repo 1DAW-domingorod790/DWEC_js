@@ -10,5 +10,5 @@
         }
     }
     
-    console.log(pintarDienteSierra('A', 5));
+    console.log(pintarDienteSierra('A', 20));
 }

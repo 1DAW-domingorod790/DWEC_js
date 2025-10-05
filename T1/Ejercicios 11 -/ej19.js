@@ -5,5 +5,5 @@
         return cadena.split(separator);
     }
 
-    console.log(cadenaToArray("hola que tal", ' '));
+    console.log(cadenaToArray("     hola que tal     ", ' '));
 }

@@ -1,5 +1,6 @@
 "use strict"
 {
+    //NORMAL FUNCTION
     function esParOImpar (n){
         if (n % 2 == 0){
             return "Par";
@@ -8,7 +9,7 @@
         }
     }
 
-
+    //RECURSIVE FUNCTION
     function esParOImpar2(n){
         if(n===0){
             return 'par';
