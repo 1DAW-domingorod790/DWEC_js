@@ -28,13 +28,18 @@
         }
     }
 
+    function validarDniRegExp (dni) {
+        let regExp = /^\d{8}[A-Z]$/i;
+        return regExp.test(dni);
+    }
+
     let dniPrueba1 = '12345678a';
     let dniPrueba2 = '1234567aA';
     let dniPrueba3 = '12345678';
     let dniPrueba4 = '12345678-';
     
-    console.log(validDNI(dniPrueba1));
-    console.log(validDNI(dniPrueba2));
+    console.log(validarDniRegExp(dniPrueba1));
+    console.log(validarDniRegExp(dniPrueba2));
     console.log(validDNI(dniPrueba3));
     console.log(validDNI(dniPrueba4));
 }

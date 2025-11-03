@@ -10,7 +10,4 @@
     } else{
         console.log(" son iguales ")
     }
-
-
-
 }

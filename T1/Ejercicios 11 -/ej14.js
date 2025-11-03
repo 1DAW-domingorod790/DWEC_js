@@ -1,8 +1,9 @@
 "use strict"
 {
-    function aplicarDescuento (precioInicial, descuento) {
-        return precioInicial * ((100-descuento)*0.01);
-    }
+    // function aplicarDescuento (precioInicial, descuento) {
+    //     return precioInicial * ((100-descuento)*0.01);
+    // }
 
+    let aplicarDescuento = (precioInicial, descuento) => precioInicial * ((100-descuento)*0.01);
     console.log(aplicarDescuento(1000, 20));
 }
