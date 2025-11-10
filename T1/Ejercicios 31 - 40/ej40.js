@@ -1,17 +1,9 @@
 "use strict"
 {
-    function anosPasados(comprobar) {
-        let actual = new Date();
-
-        let anos = actual - comprobar;
-        return (anos.getFullYear);
-    }
-
-
     function getEdad (fecha) {
         let anyo = fecha.getFullYear();
         let mes = fecha.getMonth();
-        let dia = fecha.getDate();
+        let dia = fecha.getDate("");
 
         let fechaActual = new Date();
         let anyoActual = fechaActual.getFullYear();
@@ -19,8 +11,8 @@
         let diaActual = fechaActual.getDate();
 
         let edad = anyoActual - anyo - 1; // suma la diferencia de años menos 1,
-        if (mes === mesActual){           // ya que tiene que comprobar si este año
-            if (dia < diaActual){         // has cumplido años o no
+        if (mes === mesActual){           // ya que tiene que comprobar si este 
+            if (dia < diaActual){         // año has cumplido años o no
                 edad++;
             }
         }else if (mes < mesActual){
@@ -30,5 +22,5 @@
         return edad;
     }
 
-    console.log(getEdad(new Date("11/07/2003")));
+    console.log(getEdad(new Date("11/02/2005")));
 }

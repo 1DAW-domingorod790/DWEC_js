@@ -8,5 +8,10 @@
         return cadenaInversa;
     }
 
+    function reverse2 (cadena) {
+        return cadena.reverse();
+    }
+
     console.log(reverse("Hola mundo"));
+    console.log(reverse2("Hola mundo"));
 }

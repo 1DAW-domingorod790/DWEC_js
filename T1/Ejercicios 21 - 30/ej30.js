@@ -1,21 +1,26 @@
 "use strict"
 {
-    let fechaNacimiento = prompt("Introduce tu edad");
+    function getEdad (fecha) {
+        let anyo = fecha.getFullYear();
+        let mes = fecha.getMonth();
+        let dia = fecha.getDate();
 
-    let diaNacimiento = fechaNacimiento.substring(0, 2);
-    let mesNacimiento = fechaNacimiento.substring(3, 5);
-    let anyoNacimiento = fechaNacimiento.substring(6);
+        let fechaActual = new Date();
+        let anyoActual = fechaActual.getFullYear();
+        let mesActual = fechaActual.getMonth();
+        let diaActual = fechaActual.getDate();
 
-    let edad = 2025 - anyoNacimiento;
-
-    if (mesNacimiento == 10) {
-        if (diaNacimiento > 16) {
-            edad--;
+        let edad = anyoActual - anyo - 1; // suma la diferencia de años menos 1,
+        if (mes === mesActual){           // ya que tiene que comprobar si este año
+            if (dia < diaActual){         // has cumplido años o no
+                edad++;
+            }
+        }else if (mes < mesActual){
+            edad++;
         }
-    }if (mesNacimiento > 10) {
-        edad--;
+
+        return edad;
     }
 
-    console.log("Tienes "  + edad + " años")
-
+    console.log(getEdad(new Date("11/02/2005")));
 }
